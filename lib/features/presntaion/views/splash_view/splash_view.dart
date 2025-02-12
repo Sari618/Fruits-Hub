@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:fruits_hub/features/presntaion/views/splash_view/splashviewbody.dart';
 
 class SplashView extends StatelessWidget {
   const SplashView({super.key});
@@ -8,9 +9,7 @@ class SplashView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text('Splash Screen'),
-      ),
+      body: SafeArea(child: SplashViewBody()),
     );
   }
 }
