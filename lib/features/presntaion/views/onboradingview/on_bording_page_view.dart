@@ -3,7 +3,7 @@ import 'package:fruits_hub/core/utlis/app_images.dart';
 import 'package:fruits_hub/features/presntaion/views/onboradingview/page_view_iteam.dart';
 
 class OnBordingPageView extends StatelessWidget {
-  const OnBordingPageView({Key? key}) : super(key: key);
+  const OnBordingPageView({super.key});
 
   @override
   Widget build(BuildContext context) {
