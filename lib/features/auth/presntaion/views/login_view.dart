@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:fruits_hub/core/widgets/custom_app_bar.dart';
+
+import 'package:fruits_hub/features/auth/presntaion/views/widgets/login_view_body.dart';
 
 class LoginView extends StatelessWidget {
   const LoginView({super.key});
@@ -7,38 +10,14 @@ class LoginView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Login'),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            TextField(
-              decoration: InputDecoration(
-                labelText: 'Email',
-                border: OutlineInputBorder(),
-              ),
-            ),
-            SizedBox(height: 16.0),
-            TextField(
-              decoration: InputDecoration(
-                labelText: 'Password',
-                border: OutlineInputBorder(),
-              ),
-              obscureText: true,
-            ),
-            SizedBox(height: 16.0),
-            ElevatedButton(
-              onPressed: () {
-                // Handle login logic here
-              },
-              child: Text('Login'),
-            ),
-          ],
-        ),
-      ),
+      appBar: buildAppBar(
+        context,
+        title:'تسجيل الدخول',
+      ),      
+      body: LoginViewBody(),
     );
   }
+  
 }
+
+      
