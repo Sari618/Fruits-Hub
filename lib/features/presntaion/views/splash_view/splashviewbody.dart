@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:fruits_hub/core/services/shared_prefrende_senglton.dart';
 import 'package:fruits_hub/core/utlis/app_images.dart';
+import 'package:fruits_hub/features/auth/presntaion/views/login_view.dart';
 import 'package:fruits_hub/features/presntaion/views/onboradingview/on_boarding_view.dart';
+import 'package:fruits_hub/constance.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -43,8 +46,13 @@ class _SplashViewBodyState extends State<SplashViewBody> {
     );
   }
   void excuteNavigation() {
+    bool? isOnBordingViewSeen = Prefs().getBool(kIsOnBordingViewSeen);
   Future.delayed(const Duration(seconds: 3), () {
-    Navigator.pushReplacementNamed(context, OnBoardingView.routeName);
+    if (isOnBordingViewSeen != null && isOnBordingViewSeen) {
+  Navigator.pushReplacementNamed(context, LoginView.routeName);
+}else{
+  Navigator.pushReplacementNamed(context, OnBoardingView.routeName);
+}
   });
 }
 }
