@@ -3,7 +3,7 @@ import 'package:fruits_hub/constance.dart';
 import 'package:fruits_hub/core/utlis/app_images.dart';
 import 'package:fruits_hub/core/widgets/custom_boutton.dart';
 import 'package:fruits_hub/core/widgets/custom_text_filed.dart';
-import 'package:fruits_hub/features/auth/presntaion/views/widgets/dont_have_account_widget.dart';
+import 'package:fruits_hub/features/auth/presntaion/views/widgets/already_have_account.dart';
 import 'package:fruits_hub/features/auth/presntaion/views/widgets/or_divider.dart';
 import 'package:fruits_hub/features/auth/presntaion/views/widgets/social_login_button.dart';
 import 'package:fruits_hub/features/auth/presntaion/views/widgets/terms_and_condtions.dart';
@@ -52,8 +52,8 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
               text: 'تسجيل',
               onPressed: () {},
             ),
-            const SizedBox(height: 33),
-            DontHaveAnAccountWidget(),
+            const SizedBox(height: 26),
+            AlreadyHaveAccountWidget(),
             const SizedBox(height: 16),
             OrDivider(),
             SocialLoginButton(

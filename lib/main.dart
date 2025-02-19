@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 import 'package:fruits_hub/core/helper_function/on_genrate_route.dart';
 import 'package:fruits_hub/core/services/shared_prefrende_senglton.dart';
 import 'package:fruits_hub/core/utlis/app_colors.dart';
@@ -10,6 +11,9 @@ import 'package:fruits_hub/generated/l10n.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Prefs().init();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const FruitsHub());
 }
 
