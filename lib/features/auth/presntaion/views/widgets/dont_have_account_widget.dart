@@ -1,7 +1,10 @@
+
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:fruits_hub/core/utlis/app_style_text.dart';
 import 'package:fruits_hub/features/auth/presntaion/views/widgets/signup_view.dart';
+
+
 
 class DontHaveAnAccountWidget extends StatelessWidget {
   const DontHaveAnAccountWidget({
@@ -15,17 +18,19 @@ class DontHaveAnAccountWidget extends StatelessWidget {
         
         children: [
           TextSpan(
+
             recognizer: TapGestureRecognizer()
               ..onTap = () {
                 Navigator.pushNamed(context, SignUpView.routeName);
               },
             
+
             text: 'ليس لديك حساب؟',
             style:
                 TextStyles.semiBold13.copyWith(color: Color(0xFF949D9E)),
           ),
           TextSpan(
-            
+
             text: ' ',
             style:
                 TextStyles.semiBold13.copyWith(color: Color(0xFF949D9E)),
