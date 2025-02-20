@@ -41,7 +41,7 @@ class AlreadyHaveAccountWidget extends StatelessWidget {
               ..onTap = () {
                 Navigator.pop(context);
               },
-            text: 'قم بأنشاء حساب ',
+            text: 'قم بتسجيل الدخول ',
             style:
                 TextStyles.semiBold13.copyWith(color: Color(0xFF1B5E37)),
           ),
