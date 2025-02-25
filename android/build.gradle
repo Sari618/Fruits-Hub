@@ -16,3 +16,13 @@ subprojects {
 tasks.register("clean", Delete) {
     delete rootProject.buildDir
 }
+buildscript {
+    ext {
+        androidXCore = "1.6.0" // <-- Add this line
+        buildToolsVersion = "29.0.3"
+        minSdkVersion = 23
+        compileSdkVersion = 30
+        targetSdkVersion = 23
+        ndkVersion = "20.1.5948944"
+    }
+}

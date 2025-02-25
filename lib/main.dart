@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:fruits_hub/features/presntaion/ads/ad.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'firebase_options.dart';
 import 'package:fruits_hub/core/helper_function/on_genrate_route.dart';
 import 'package:fruits_hub/core/services/shared_prefrende_senglton.dart';
@@ -10,6 +12,8 @@ import 'package:fruits_hub/generated/l10n.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  MobileAds.instance.initialize();
+  Ads().showAppOpenAd();
   await Prefs().init();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
