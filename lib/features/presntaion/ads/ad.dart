@@ -4,7 +4,6 @@ import 'package:google_mobile_ads/google_mobile_ads.dart';
 class Ads {
   InterstitialAd? _interstitialAd;
   void showAds() {
-    AppOpenAd? _appOpenAd;
     InterstitialAd.load(
         adUnitId: AdManger.interstitalAd,
         request: AdRequest(),

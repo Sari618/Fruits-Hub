@@ -1,5 +1,7 @@
+import 'package:dartz/dartz.dart';
+import 'package:fruits_hub/core/errors/server_failure.dart';
 import 'package:fruits_hub/features/auth/domain/entites/user_entity.dart';
 
 abstract class AuthRepo {
-  Future<UserEntity> CreateUserWithEmailAndPassword(String email, String password);
+  Future<Either<Failure,UserEntity>> createUserWithEmailAndPassword(String email, String password,String name);
 }
